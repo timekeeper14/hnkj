@@ -1,0 +1,236 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../images/双层波浪动画特效.css">
+</head>
+<body>
+		<div class="head clearfix">
+	<h1 class="pulll_left">职业本科师资现状及建设研究可视化分析</h1>
+		<div class="menu menu2 pulll_left">
+		<ul>      
+			<li><a href="../index.html">首页</a></li>
+			<li><a href="../012大数据/index.html">基本条件</a></li>
+			<li><a href="../009平台/index.html">核心情况</a></li>
+			<li><a href="../013大数据/index.html">附加信息</a></li>
+		</ul>
+		</div>
+		<div class="time" id="showTime">2018/6/12 17:00:12</div>
+		
+	</div>
+	<div class="mainbox">
+	<ul class="clearfix nav1">
+		<li style="width: 25%">
+		<div class="box">
+			<div class="tit">本科外聘和兼职教师承担本科教学任务</div>
+			<div class="boxnav" id="echart1">
+
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit">2023年职业教育学校专任教师教学领域所属大类</div>
+			<div class="boxnav" id="echart_zuoxia">
+				<!-- 原表格处 -->
+				<div class="statusList">
+					<ul class="seTable">
+						<li>指标</li>
+						<li>人数</li>
+					</ul>
+					<div id="orderItems" class="outlineBorder">
+						<ul class="rolling rolStyle">
+							<li>医药卫生大类</li>
+							<li>445</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>公共基础课</li>
+							<li>210</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>电子与信息大类</li>
+							<li>136</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>土木建筑大类</li>
+							<li>99</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>财经商贸大类</li>
+							<li>93</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>文化艺术大类</li>
+							<li>88</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>装备制造大类</li>
+							<li>73</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>交通运输大类</li>
+							<li>50</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>生物与化工大类</li>
+							<li>49</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>教育与体育大类</li>
+							<li>39</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>公共管理与服务大类</li>
+							<li>36</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>公安与司法大类</li>
+							<li>33</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>资源环境与安全大类</li>
+							<li>18</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>农林牧渔大类</li>
+							<li>13</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>食品药品与粮食大类</li>
+							<li>11</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>新闻传播大类</li>
+							<li>9</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>旅游大类</li>
+							<li>8</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>能源动力与材料大类</li>
+							<li>4</li>
+						</ul>
+						<ul class="rolling rolStyle">
+							<li>水利大类</li>
+							<li>1</li>
+						</ul>
+						
+					</div>
+				</div>
+			</div>
+			</div>
+		
+		</li>
+		<li style="width: 25%">
+		<div class="box">
+			<div class="tit">专任教师接受培训分类情况</div>
+			<div class="boxnav" id="echart2" >
+			
+			
+			</div>
+			
+			
+			</div>
+<div class="box">
+	<div class="tit">专任教师变动情况</div>
+			<div class="boxnav" id="echart5"></div>
+			</div>
+		</li>
+		<li style="width: 25%">
+		
+		<div class="box">
+			<div class="tit">历年专任教师接受培训总数</div>
+			<div class="boxnav" id="echart3">
+			<!-- <div style="float: left; width: 100%; height: 100%; padding: 0 15px;" id="echart3"></div> -->
+			</div>
+			
+			</div>
+			<div class="box">
+			<div class="tit">专职辅导员与专职思政课教师教龄区间</div>
+			<div class="boxnav" id="echart6">
+			
+			
+			
+			</div>
+			</div>
+		
+		</li>
+		<li style="width: 25%">
+		
+		<div class="box">
+			<div class="tit">教职工政治身份及其他情况</div>
+			<div class="boxnav" id="echart4" >
+			
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit">高职校内教师职业资格证书top10</div>
+			<div class="boxnav"  id="echart7">
+
+			</div>
+			</div>
+		
+		</li>
+		</ul>
+		
+		
+		
+		
+	</div>
+	
+	<script>
+$(function(){
+	$(function(){  
+    var map = new BMap.Map("map");    // 创建Map实例  
+    // 设置地图中心点为海口市，并设置地图级别  
+    map.centerAndZoom(new BMap.Point(110.351076, 20.017223), 12);    
+  
+    var size1 = new BMap.Size(10, 50); // 这个变量在后续代码中未使用，可以移除或保留  
+    // map.setCurrentCity("北京"); // 这行代码可以移除，因为我们已经将地图中心设置为了海口市  
+    map.enableScrollWheelZoom(true);       
+  
+    // 设备地图颜色（注意：百度地图API可能不支持直接通过style属性更改地图样式，这里仅为示例）  
+    // 实际上，你可能需要使用setMapStyleV2或类似的API来加载自定义样式  
+    // var mapStyle={style:"midnight"};  
+    // map.setMapStyle(mapStyle); // 这行代码可能不起作用，具体取决于百度地图API的版本和支持情况  
+  
+	var meilanCampus = new BMap.Point(110.414979, 20.049119); // 美兰校区坐标（示例）  
+    var yunlongCampus = new BMap.Point(110.461334, 19.857876); // 云龙校区坐标（示例）
+	map.centerAndZoom(meilanCampus, 11);  // 以美兰校区为中心，并设置地图级别
+    var myIcon = new BMap.Icon("images/head.jpg", new BMap.Size(45,45));  
+    var marker1 = new BMap.Marker(meilanCampus,{icon:myIcon});   
+    var marker2 = new BMap.Marker(yunlongCampus,{icon:myIcon});   
+  
+    map.addOverlay(marker1);     
+    map.addOverlay(marker2);     
+});})
+</script>
+	
+	<script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+       t = setTimeout(time,1000); //设定定时器，循环运行     
+    } 
+
+</script>
+	<div class="sea">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>
