@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +8,12 @@
 <link rel="stylesheet" type="text/css" href="signup/css/reset.css" />
 <link rel="stylesheet" type="text/css" href="signup/css/scanboardLogin.css" />
 <link rel="stylesheet" type="text/css" href="signup/css/animsition.css" />
-<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script> -->
-
 </head>
 <body>
-	
 	<div class="wp animsition">
-		
 		<div class="boardLogin">
 			<a href="#" class="logo">
-				<h3>基于知识图谱可视化的职业本科师资现状及建设实践研究</h3>
+				基于知识图谱可视化的职业本科师资现状及建设实践研究
 			</a>
 			<style>
 				.prompt p {
@@ -71,51 +67,13 @@
 				};
 			</script>
 		</div>
-		<!-- 试试地图 -->
-		<div class="box">
-			<div class="boxnav" id="map" style="height:433px;width:30%;margin-top: 100px;margin-left: 20px;">
-	
-			</div>
-			</div>
-		
 	</div>
-
 	<div id="particles-js"></div>
-
 </body>
-
 <script type="text/javascript" src="signup/js/jquery.min.js"></script>
 <script type="text/javascript" src="signup/js/jquery.animsition.js"></script>
 <script src="signup/js/particles.min.js"></script>
-<script>
-	$(function(){
-		$(function(){  
-		var map = new BMap.Map("map");    // 创建Map实例  
-		// 设置地图中心点为海口市，并设置地图级别  
-		map.centerAndZoom(new BMap.Point(110.351076, 20.017223), 12);    
-	  
-		var size1 = new BMap.Size(10, 50); // 这个变量在后续代码中未使用，可以移除或保留  
-		// map.setCurrentCity("北京"); // 这行代码可以移除，因为我们已经将地图中心设置为了海口市  
-		map.enableScrollWheelZoom(true);       
-	  
-		// 设备地图颜色（注意：百度地图API可能不支持直接通过style属性更改地图样式，这里仅为示例）  
-		// 实际上，你可能需要使用setMapStyleV2或类似的API来加载自定义样式  
-		var mapStyle={style:"midnight"};  
-		map.setMapStyle(mapStyle); // 这行代码可能不起作用，具体取决于百度地图API的版本和支持情况  
-	  
-		var meilanCampus = new BMap.Point(110.414979, 20.049119); // 美兰校区坐标（示例）  
-		var yunlongCampus = new BMap.Point(110.461334, 19.857876); // 云龙校区坐标（示例）
-		map.centerAndZoom(yunlongCampus, 11);  // 以美兰校区为中心，并设置地图级别
-		var myIcon = new BMap.Icon("../013大数据/images/head.jpg", new BMap.Size(45,45));  
-		var marker1 = new BMap.Marker(meilanCampus,{icon:myIcon});   
-		var marker2 = new BMap.Marker(yunlongCampus,{icon:myIcon});   
-	  
-		map.addOverlay(marker1);     
-		map.addOverlay(marker2);     
-	});})
-	</script>
 <script src="signup/js/app.js"></script>
-
 <script type="text/javascript">
 	$(".animsition").animsition({
 	    inClass               :   'fade-in',
@@ -139,5 +97,5 @@
 	    overlayParentElement  :   'body'
   	});
 </script>
-
 </html>
+
