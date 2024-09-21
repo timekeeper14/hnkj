@@ -3,8 +3,8 @@ html,body{
 	overflow: hidden;
 }
 body{
-	background: url(../images/3.jpg);
-	background-size: 100% 100%;
+/* 	background: url(../images/3.jpg);
+	background-size: 100% 100%; */
 }
 input:-webkit-autofill,
 textarea:-webkit-autofill,
